@@ -1,0 +1,35 @@
+
+
+h3 { 
+    color: black;
+    font-size: 3.3rem;
+    font-weight: 600;
+    margin-block-start: 1rem;
+    margin-block-end: 0;
+}
+
+h4 {
+    color: gray;
+    font-size: 2.3rem;
+    font-weight: 500;
+    margin-block-start: 0;
+}
+
+
+
+.project-card {
+    transition: 0.2s ease-out;
+
+    a {
+        text-decoration: none;
+    }
+    
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+}
+
+
+
