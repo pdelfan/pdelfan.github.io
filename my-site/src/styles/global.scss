@@ -164,7 +164,8 @@ h4 {
 */
 
 .project-card {
-    margin-bottom: 10rem;
+    max-width: 60rem;
+    margin: 1rem auto 10rem auto;
 
     transition: 0.2s ease-out;
 
