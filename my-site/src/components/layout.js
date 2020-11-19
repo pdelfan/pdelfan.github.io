@@ -11,7 +11,7 @@ const Layout = (props) => {
                 <title>Pouria Delfanazari</title>
                 <html lang="en" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
-                <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Literata:wght@700&display=swap" rel="stylesheet" as="font"/>                
+                <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Literata:wght@700&display=swap" rel="stylesheet" as="font" />
             </Helmet>
             {props.children}
             <Footer />

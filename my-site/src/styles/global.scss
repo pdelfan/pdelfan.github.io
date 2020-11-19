@@ -197,14 +197,13 @@ h4 {
 
 .header {
     max-width: 60rem;
-    margin: 5rem auto 0 auto;
+    margin: 0rem auto 0 auto;
 }
 
 .project-header {
-    margin: 2rem auto 0 auto;   
-    padding: 3rem 1rem 3rem 1rem; 
+    margin: 0 auto 0 auto;
+    padding: 3rem 1rem 3rem 1rem;
 }
-
 
 .project-info {
     display: grid;
@@ -224,6 +223,14 @@ h4 {
 .covid-project {
     background: #f5f7fb;
 
+    header {
+        background-color: #2B35EB;
+    }
+
+    nav a {
+        color: $white;        
+    }
+
     .project-header {
         background-color: #2b35eb;
         color: $white;
@@ -234,8 +241,8 @@ h4 {
     }
 
     .shadow {
-        -webkit-box-shadow: 0px 1px 15px 5px rgba(0,0,0,0.2); 
-        box-shadow: 0px 1px 15px 5px rgba(0,0,0,0.2);
+        -webkit-box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.2);
     }
 
     h1 {
@@ -281,8 +288,52 @@ h4 {
         margin-top: 1rem;
         max-width: 50rem;
     }
-
 }
+
+
+
+/*
+    HEADER
+*/
+
+
+nav {
+    position: sticky;
+    margin-left: auto;
+    margin-right: auto;
+    position: sticky;
+    z-index: 999;        
+    box-sizing: border-box;    
+    display: flex;
+    justify-content: space-between;    
+    padding: 1rem;    
+    max-width: 63rem;
+}
+
+
+nav a {    
+    color: #35383b;
+    opacity: 0.8;    
+    text-decoration: none;
+    font-size: 1.1rem;  
+    font-weight: 500;  
+    margin: 0 0.5em;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+.nav .nav-right a {
+    margin-left: 1.5em;
+}
+
+
 
 /*
     FOOTER

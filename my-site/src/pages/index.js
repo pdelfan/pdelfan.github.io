@@ -1,11 +1,13 @@
 import React from "react"
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
+import Header from '../components/header'
 import Img from 'gatsby-image'
 
 const Home = ({ data }) => {
   return (
     <Layout>
+      <Header />
       <h1>I design and code products on the web.</h1>
       <h2>I also do other things</h2>
 

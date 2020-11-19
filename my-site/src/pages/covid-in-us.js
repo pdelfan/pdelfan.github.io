@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
+import Header from "../components/header"
 import { Helmet } from "react-helmet"
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
@@ -12,6 +13,7 @@ const CovidProject = ({ data }) => {
             <Helmet>
                 <body className="covid-project" />
             </Helmet>
+            <Header />
             <div className="project-header">
                 <h1>Tracking the spread of COVID-19 in the United States</h1>
                 <Img fluid={data.covidPostHeader.childImageSharp.fluid} alt="covid project home page" className="header" />
