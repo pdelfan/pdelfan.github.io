@@ -296,9 +296,7 @@ h4 {
     HEADER
 */
 
-
-nav {
-    position: sticky;
+nav {    
     margin-left: auto;
     margin-right: auto;
     position: sticky;
@@ -346,3 +344,398 @@ footer {
         font-size: 1.2rem;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+// Style guide
+/**
+ * Style Guide Stylesheet
+ * ---
+ * 01. General
+ * 02. Sidebar
+ * 03. Content
+ * 04. Navigation
+ * 05. Citations
+ * 06. Typograhy
+ * 07. Colors
+ * 08. Component
+ * 09. Footer
+ * 10. > 720px (lg)
+ */
+
+/* --------------------------------------------------------------------------*/
+/* 01. General                                                               */
+/* --------------------------------------------------------------------------*/
+
+.sg-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* Placeholder block */
+  .sg-block {
+    background-color: var(--color-gray-4);
+    height: 20px;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* --------------------------------------------------------------------------*/
+  /* 02. Sidebar                                                               */
+  /* --------------------------------------------------------------------------*/
+  
+  .sg-sidebar {
+    background-color: #1F1712;
+  }
+  
+  .sg-sidebar__content {
+    padding: 2rem 1rem 0.5rem 1rem;
+  }
+  
+  .sg-sidebar__logo {
+    margin-bottom: 0;
+    font-size: 1.3333rem;
+    line-height: 1.2;
+    color: white;
+  }
+  .sg-sidebar__logo > a {
+    color: inherit;
+  }
+  .sg-sidebar__logo > a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  .sg-sidebar__logo > a:active,
+  .sg-sidebar__logo > a:focus {
+    color: var(--color-gray-3);
+    text-decoration: none;
+  }
+  
+  /* --------------------------------------------------------------------------*/
+  /* 03. Content                                                               */
+  /* --------------------------------------------------------------------------*/
+  
+  .sg-content {
+    padding: 3rem 0 1rem 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    -webkit-overflow-scrolling: touch; /* Ensure iOS smooth scrolling */
+  }
+  
+  .sg-content-wrap {
+    padding: 0 1rem;
+    max-width: 39rem; /* 624px */
+  }
+  
+  /* --------------------------------------------------------------------------*/
+  /* 04. Navigation                                                            */
+  /* --------------------------------------------------------------------------*/
+  
+  .sg-nav {
+    margin-top: 0.5rem;
+  }
+  .sg-nav::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
+  .sg-nav__list {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+  
+  .sg-nav__list > li {
+    float: left;
+    margin-right: 1rem;
+  }
+  .sg-nav__list > li:last-of-type {
+    margin-right: 0;
+  }
+  
+  .sg-nav__item {
+    display: block;
+    line-height: 2;
+    color: white;
+  }
+  .sg-nav__item:hover {
+    color: white;
+  }
+  .sg-nav__item:active, .sg-nav__item:focus {
+    color: var(--color-gray-3);
+    text-decoration: none;
+  }
+  
+  .sg-nav__item--active {
+    font-weight: 600;
+  }
+  
+  .sg-nav__item--anchor {
+    display: none;
+    padding-left: 1rem;
+  }
+  
+  /* --------------------------------------------------------------------------*/
+  /* 05. Citations                                                             */
+  /* --------------------------------------------------------------------------*/
+  
+  .sg-citations {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .sg-citations > li {
+    margin-bottom: 1.6666rem;
+    text-indent: -2rem;
+    padding-left: 2rem;
+    word-wrap: break-word;
+  }
+  
+  /* --------------------------------------------------------------------------*/
+  /* 06. Tyopgraphy                                                            */
+  /* --------------------------------------------------------------------------*/
+  
+  .sg-typography__display-font {
+    font-family: 'Alfa Slab One', 'Helvetica Nueue', Helvetica, Arial, sans-serif;
+  }
+  
+  .sg-typography__body-font {
+    font-weight: 600;
+  }
+  
+  .sg-typography__chart {
+    list-style: none;
+    padding-left: 0;
+    border-top: solid 4px var(--color-gray-3);
+    border-bottom: solid 3px var(--color-gray-3);
+  }
+  
+  .sg-typography__chart-item {
+    display: flex;
+    border-bottom: solid 1px var(--color-gray-3);
+    padding: 1rem 0;
+  }
+  
+  .sg-typography__preview {
+    align-self: baseline;
+    display: block;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  
+  .sg-typography__meta {
+    margin-bottom: 0;
+    flex-shrink: 0;
+    align-self: baseline;
+    font-size: 0.75rem;
+    text-align: right;
+    color: var(--color-gray-2);
+  }
+  
+  /* --------------------------------------------------------------------------*/
+  /* 07. Colors                                                                */
+  /* --------------------------------------------------------------------------*/
+  
+  .sg-colors {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .sg-color {
+    display: flex;
+    margin-bottom: 0.5rem;
+    border: solid 1px rgba(0,0,0,0.1);
+    padding: 1rem;
+  }
+  
+  .sg-color__name {
+    width: 100%;
+    align-self: baseline;
+    opacity: 0.8;
+  }
+  
+  .sg-color__value {
+    flex-shrink: 0;
+    align-self: baseline;
+    font-size: 0.75rem;
+    text-align: right;
+    opacity: 0.4;
+  }
+  
+  .sg-color--day {
+    background-color: white;
+  }
+  
+  .sg-color--night {
+    background-color: var(--color-night);
+    color: white;
+  }
+  
+  .sg-color--earth-orange {
+    background-color: var(--color-earth-orange);
+  }
+  
+  .sg-color--life-green {
+    background-color: var(--color-life-green);
+  }
+  
+  .sg-color--sea-blue {
+    background-color: var(--color-dark-blue);
+    color: white;
+  }
+  
+  .sg-color--magma-red {
+    background-color: var(--color-magma-red);
+  }
+  
+  .sg-color--gray-1 {
+    background-color: var(--color-gray-1);
+    color: white;
+  }
+  
+  .sg-color--gray-2 {
+    background-color: var(--color-gray-2);
+    color: white;
+  }
+  
+  .sg-color--gray-3 {
+    background-color: var(--color-gray-3);
+  }
+  
+  .sg-color--gray-4 {
+    background-color: var(--color-gray-4);
+  }
+  
+  .sg-color--gray-5 {
+    background-color: var(--color-gray-5);
+  }
+  
+  .sg-color--anchor {
+    background-color: var(--color-anchor);
+    color: white;
+  }
+  
+  .sg-color--anchor-hover {
+    background-color: var(--color-anchor-hover);
+    color: white;
+  }
+  
+  /* --------------------------------------------------------------------------*/
+  /* 08. Component                                                             */
+  /* --------------------------------------------------------------------------*/
+  
+  .sg-component-preview {
+    padding: 1rem;
+    border: solid 1px var(--color-gray-4);
+  }
+  
+  .sg-component-label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--color-night);
+  }
+  
+  .sg-component-dark {
+    position: relative;
+    background-color: var(--color-gray-1);
+  }
+  
+  .sg-component-nav {
+    height: 6rem;
+  }
+  
+  .sg-component-code {
+    margin-bottom: 1.6666rem;
+    padding: 1rem;
+    background-color: var(--color-gray-4);
+  }
+  
+  .sg-component-code pre {
+    margin: 0;
+  }
+  
+  .sg-component-code code {
+    padding: 0;
+    white-space: pre-wrap;
+  }
+  
+  /* --------------------------------------------------------------------------*/
+  /* 09. Footer                                                                */
+  /* --------------------------------------------------------------------------*/
+  
+  .sg-footer-content {
+    border-top: solid 1px var(--color-gray-3);
+    padding-top: 1.6666rem;
+    font-size: 0.75rem;
+    color: var(--color-gray-2);
+  }
+  
+  /* --------------------------------------------------------------------------*/
+  /* 10. > 720px                                                               */
+  /* --------------------------------------------------------------------------*/
+  
+  @media screen and (min-width: 45em) {
+  
+    .sg-wrap {
+      flex-direction: row;
+    }
+  
+    .sg-sidebar__logo {
+      margin-bottom: 1.5rem;
+    }
+  
+    .sg-nav__list > li {
+      float: none;
+      margin-right: 0;
+    }
+  
+    .sg-nav__item--anchor {
+      display: block;
+    }
+  
+    .sg-nav__item--page {
+      margin-top: 1rem;
+    }
+  
+    .sg-sidebar {
+      flex-shrink: 0;
+      flex-grow: 0.3333;
+      flex-basis: 12rem; /* 192px */
+      overflow-x: hidden;
+      overflow-y: auto;
+      height: 100vh;
+    }
+  
+    .sg-sidebar__content {
+      float: right;
+      padding: 3rem 1rem;
+      width: 12rem; /* 192px */
+    }
+  
+    .sg-content-wrap {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  
+    .sg-content {
+      flex-grow: 1;
+      flex-basis: 39rem; /* 624px */
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding-top: 3rem;
+      height: 100vh;
+    }
+  
+  }
