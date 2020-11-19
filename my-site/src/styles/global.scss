@@ -2,32 +2,6 @@
     GENERAL 
 */
 
-* {
-    box-sizing: border-box;
-}
-
-html {    
-    font-family: 'Inter';    
-}
-
-body {
-    max-width: 80rem;
-    margin: auto;
-    padding: 0.5rem;  
-    background-color: white;   
-      
-}
-
-// fix for when overflowed material went under and hidden the boundary  
-.tl-edges {
-    overflow: visible;
-}
-
-
-/* 
-    COLOURS
-*/
-
 // basic
 $black: #000000;
 $white: #ffffff;
@@ -78,7 +52,47 @@ $blue-50: #4589ff;
 $blue-40: #78a9ff;
 $blue-30: #a6c8ff;
 
+* {
+    box-sizing: border-box;
+}
 
+html {
+    font-family: "Inter", sans-serif, Arial;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    font-size: 1rem;
+    line-height: 1;
+    color: #2b2b2b;
+}
+
+.gatsby-image-wrapper {
+    border-radius: 0.5rem;
+}
+
+.website img {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-top: 1rem;
+}
+
+figcaption {
+    font-size: 0.95rem;
+    color: $gray-60;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 35em;
+}
+
+// fix for when overflowed material went under and hidden the boundary
+.tl-edges {
+    overflow: visible;
+}
 
 /*
     HEADINGS
@@ -114,7 +128,6 @@ h4 {
     font-weight: 300;
 }
 
-
 // blurred circle test
 .circle {
     display: block;
@@ -137,23 +150,148 @@ h4 {
     right: 0;
 }
 
-
 /*
-    project page background colours
+    project cards
 */
 
+.project-card {
+    margin-bottom: 10rem;
+
+    transition: 0.2s ease-out;
+
+    a {
+        text-decoration: none;
+        color: $black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-block-start: 0.5rem;
+        margin-block-end: 1rem;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 2.5rem;
+    }
+
+    h4 {
+        font-weight: 400;
+        font-size: 1.8rem;
+    }
+
+    h5 {
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in;
+}
+
+.header {
+    max-width: 60rem;
+    margin: 5rem auto 0 auto;
+}
+
+.project-header {
+    margin: 2rem auto 0 auto;   
+    padding: 3rem 1rem 3rem 1rem; 
+}
 
 
+.project-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    column-gap: 1rem;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+}
+
+.covid-project {
+    background: #f5f7fb;
+
+    .project-header {
+        background-color: #2b35eb;
+        color: $white;
+    }
+
+    .project-info h2 {
+        color: $gray-60;
+    }
+
+    .shadow {
+        -webkit-box-shadow: 0px 1px 15px 5px rgba(0,0,0,0.2); 
+        box-shadow: 0px 1px 15px 5px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+        font-family: "Literata", Georgia;
+        font-size: 2.8rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    h3 {
+        font-family: "Literata", Georgia;
+        font-size: 2.2rem;
+        font-weight: 500;
+        color: #2b35eb;
+    }
+
+    .wrap-small {
+        max-width: 44rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        width: 95%;
+    }
+
+    .section-blue {
+        background-color: #2b35eb;
+        color: white;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+
+        h3 {
+            color: white;
+            margin-top: 0;
+        }
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        max-width: 50rem;
+    }
+
+}
 
 /*
     FOOTER
 */
 
 footer {
-    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
     p {
         font-size: 1.2rem;
     }
 }
-
-
