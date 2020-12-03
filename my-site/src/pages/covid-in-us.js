@@ -57,7 +57,7 @@ const CovidProject = ({ data }) => {
                 </div>
             </section>
 
-            <section className="section-blue">
+            <section className="section-pink">
                 <div className="wrap-small">
                     <h3>The components</h3>
                     <p>The webpage has two sections:</p>

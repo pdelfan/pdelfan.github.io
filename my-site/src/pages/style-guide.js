@@ -3,21 +3,20 @@ import Layout from '../components/layout'
 import { Helmet } from "react-helmet"
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 
 
 
 
-const NotFound = ({ data }) => {
+const StyleGuide = ({ data }) => {
     return (
         <Layout>
             <Helmet>
-                <body className="notFound" />
+                <body className="style-guide" />
             </Helmet>
 
             <div>
-                <h1>There's nothing here. <br /> You should try <br />  <AniLink cover to="../" bg="#120F14" direction="top">going back home.</AniLink></h1>
+                <h1>Style Guide</h1>
                 <Img fluid={data.notFound.childImageSharp.fluid} alt="Evening Landscape with Two Men by Caspar David Friedrich" />                
             </div>
 
@@ -26,7 +25,7 @@ const NotFound = ({ data }) => {
 }
 
 
-export default NotFound
+export default StyleGuide
 
 
 

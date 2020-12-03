@@ -132,9 +132,47 @@ h4 {
     font-weight: 300;
 }
 
+// 404 page
+.notFound {
+    background-color: #1a171f;
+
+    header a {
+        color: $white;
+    }
+
+    h1 {
+        color: $white;
+        font-family: 'Literata';
+        margin-left: auto;
+        margin-right: auto;   
+        text-align: center; 
+    }
+
+    .gatsby-image-wrapper {
+        max-width: 70rem;
+        margin-left: auto;
+        margin-right: auto;   
+        border-radius: 1rem;
+        margin-bottom: 5rem;
+        width: 95%;
+    }
+
+    h1 a {
+        color: #ffe176;
+        background-color: rgba(255, 255, 255, 0.1);
+        transition: 0.1s;
+        text-decoration: none;
+    }
+
+    a:hover {
+        background-color: #1a171f;
+        transition: 0.1s;
+    }
+}
+
 // home
 .home {
-    header {
+    nav, header {
         background-color: #1a171f;
     }
 
@@ -288,7 +326,7 @@ h4 {
 
 .project-header {
     margin: 0 auto 0 auto;
-    padding: 3rem 1rem 3rem 1rem;
+    padding: 5rem 1rem 3rem 1rem;
 }
 
 .title {
@@ -329,19 +367,13 @@ h4 {
 }
 
 .covid-project {
-    header {
-        background-color: #2b35eb;
-    }
 
-    nav a {
-        color: $white;
+    nav, header {
+        background-color: #D11B5F;
     }
-
-    // .gatsby-image-wrapper {
-    // }
 
     .project-header {
-        background-color: #2b35eb;
+        background-color: #D11B5F;
         color: $white;
     }
 
@@ -362,8 +394,8 @@ h4 {
         margin-block-end: 0;
     }
 
-    .section-blue {
-        background-color: #2b35eb;
+    .section-pink {
+        background-color: #D11B5F;
         margin-top: 4rem;
         margin-bottom: 4rem;
 
@@ -388,16 +420,12 @@ h4 {
 }
 
 .seeda-project {
-    header {
+    nav, header {
         background-color: #313338;
     }
 
     .background-seeda {
         background-color: #313338;
-    }
-
-    nav a {
-        color: $white;
     }
 
     .project-header {
@@ -455,20 +483,20 @@ h4 {
     HEADER
 */
 
-nav {
+nav {    
     margin-left: auto;
-    margin-right: auto;
-    position: sticky;
+    margin-right: auto;    
+    position: fixed;    
+    width: 100%;    
     z-index: 999;
     box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
-    padding: 2rem 1.5rem;
-    max-width: 92rem;
+    justify-content: space-between;    
+    padding: 1rem 1.2rem;    
 }
 
 nav a {
-    color: #35383b;
+    color: $white;
     opacity: 0.8;
     text-decoration: none;
     font-size: 1.1rem;
@@ -491,6 +519,7 @@ nav .nav-left a {
 
 nav .nav-right a {
     margin-left: 0.5em;
+    font-weight: 500;
 }
 
 /*
@@ -498,9 +527,13 @@ nav .nav-right a {
 */
 
 footer {
-    padding-top: 1rem;
-    padding-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    width: 100%;    
+    margin-bottom: 0;
+    bottom: 0;
     background-color: #f0f0f0;
+    
     p {
         color: #616161;
         margin-left: auto;
@@ -510,6 +543,23 @@ footer {
         font-weight: 500;
         text-align: center;
     }
+
+    #footer-link a {           
+        color: #616161;        
+        text-decoration: none;       
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        transition: 0.1s;
+    }
+
+    #footer-link a:hover {
+        color: $black;             
+        background-color: #f0f0f0;
+        transition: 0.1s;
+    }
 }
 
 /*
@@ -517,7 +567,7 @@ footer {
 */
 
 @media screen and (max-width: 600px) {
-    .hero {
+    .hero, .notFound {
         h1 {
             font-size: 3.1rem;
             line-height: 4rem;

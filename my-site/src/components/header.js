@@ -6,10 +6,10 @@ const Header = () => {
         <header>
             <nav>
                 <div className="nav-left">
-                    <AniLink cover to="../" bg="#1B171F" direction="top" >Pouria Delfan</AniLink>
-                    </div>
+                    <AniLink cover to="../" bg="#120f14" direction="down">Pouria Delfan</AniLink>
+                </div>
                 <div className="nav-right">
-                    <AniLink cover to="/seeda">About</AniLink>
+                    <AniLink cover to="/seeda" direction="down">About</AniLink>
                     <a href="https://github.com/pdelfan">GitHub</a>
                 </div>
             </nav>
