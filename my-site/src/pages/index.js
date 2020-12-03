@@ -31,7 +31,7 @@ const Home = ({ data }) => {
       <h2>Selected Projects</h2>
 
       <div className="project-card">
-        <AniLink cover to="/seeda" bg="#EDF1F7">
+        <AniLink cover to="/seeda" bg="#EDF1F7" direction="top">
           <Img fluid={data.seedaProjectCard.childImageSharp.fluid} alt="seeda project card" />
           <h3>SEEDA &#8250;</h3>
           <h4>Re-imagining SEEDA's online identity</h4>
@@ -40,7 +40,7 @@ const Home = ({ data }) => {
       </div>
 
       <div className="project-card">
-        <AniLink cover to="/covid-in-us" bg="#F4F8FB">
+        <AniLink cover to="/covid-in-us" bg="#F4F8FB" direction="top">
           <Img fluid={data.covidProjectCard.childImageSharp.fluid} alt="covid project card" />
           <h3>Covid in the US &#8250;</h3>
           <h4>Tracking the spread of COVID-19 in the United States</h4>

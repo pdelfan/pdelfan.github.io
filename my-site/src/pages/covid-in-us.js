@@ -11,10 +11,14 @@ const CovidProject = ({ data }) => {
         <Layout>
             <Helmet>
                 <body className="covid-project" />
-            </Helmet>            
+            </Helmet>
             <div className="project-header">
-                <h1>Tracking the spread of COVID-19 in the United States</h1>
                 <Img fluid={data.covidPostHeader.childImageSharp.fluid} alt="covid project home page" className="header" />
+            </div>
+
+            <div className="wrap-small title">
+                <h1>COVID-19 in the United States</h1>
+                <h2>Tracking the spread of COVID-19 in the United States</h2>
             </div>
 
             <div className="project-info">
@@ -94,11 +98,11 @@ const CovidProject = ({ data }) => {
 
             <section>
                 <div className="wrap-small">
-                    <Img fluid={data.sketch1.childImageSharp.fluid} alt="Website layout sketches where I identified the sections for visualizations and their order" className="shadow" />
+                    <Img fluid={data.sketch1.childImageSharp.fluid} alt="Website layout sketches where I identified the sections for visualizations and their order" />
                     <figcaption>Website layout sketches where I identified the sections for visualizations and their order
                 </figcaption>
 
-                    <Img fluid={data.sketch2.childImageSharp.fluid} alt="Early sketches for some of the visualiations I implemented" className="shadow" />
+                    <Img fluid={data.sketch2.childImageSharp.fluid} alt="Early sketches for some of the visualiations I implemented" />
                     <figcaption>Early sketches for some of the visualiations I implemented</figcaption>
 
 
@@ -124,7 +128,7 @@ const CovidProject = ({ data }) => {
                     been flattened, making any form of comparison meaningless.
                 </p>
 
-                    <Img fluid={data.viz1.childImageSharp.fluid} alt="line chart of covid cases and deaths" className="website shadow" />
+                    <Img fluid={data.viz1.childImageSharp.fluid} alt="line chart of covid cases and deaths" className="website" />
                     <figcaption>
                         First visualization: Line chart. Using two scales prevents flattening of "deaths" and still be able
                         to compare the relative increase of each category
@@ -151,7 +155,7 @@ const CovidProject = ({ data }) => {
                     pink (less than 100 cases) to dark pink (500K cases and above).
                 </p>
 
-                    <Img fluid={data.viz2.childImageSharp.fluid} alt="map of covid cases in the united states" className="website shadow" />
+                    <Img fluid={data.viz2.childImageSharp.fluid} alt="map of covid cases in the united states" className="website" />
                     <figcaption>The user can interact with this map by hovering over each state to see the specific number
                     for
                     each state. In the example below, Montana is hovered over, where it’s highlighted in black
@@ -179,7 +183,7 @@ const CovidProject = ({ data }) => {
                     the end of their x-axis clearly illustrated that.
                 </p>
 
-                    <Img fluid={data.viz3.childImageSharp.fluid} alt="multiple line chart of covid cases in the us, divided by state" className="website shadow" />
+                    <Img fluid={data.viz3.childImageSharp.fluid} alt="multiple line chart of covid cases in the us, divided by state" className="website" />
                     <figcaption>Using a single scale allows us to directly compare each state to one another</figcaption>
 
                     <h3>Final thoughts</h3>

@@ -58,6 +58,7 @@ $blue-30: #a6c8ff;
 
 html {
     font-family: "Inter", sans-serif, Arial;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -68,13 +69,17 @@ body {
     color: #2b2b2b;
 }
 
+p {
+    color: #333;;
+}
+
 .wrap-small {
-    max-width: 44rem;
+    max-width: 45rem;
     margin-left: auto;
     margin-right: auto;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    width: 95%;
+    width: 95%;   
 }
 
 .website img {
@@ -175,8 +180,8 @@ h4 {
 
 .selected-projects {
     background-color: #2B2B2B;  
-    padding-top: 2rem; 
-    padding-bottom: 2rem;
+    padding: 2rem 1rem 2rem 1rem;
+    
     
     h2 {
         color: $white;
@@ -216,7 +221,7 @@ h4 {
 
 .project-card {
     max-width: 90rem;
-    margin: 1rem auto 10rem auto;
+    margin: 1rem auto 10rem auto;    
     transition: 0.2s ease-out;
 
     a {
@@ -269,24 +274,44 @@ h4 {
     padding: 3rem 1rem 3rem 1rem;
 }
 
-.project-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    column-gap: 1rem;
-    max-width: 80rem;
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
+.title {
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
 
     h2 {
+        color: #696969;
         font-size: 1.5rem;
-        font-weight: 600;
+        font-weight: 500;
+        line-height: 2rem;
+        margin-block-start: 0.8rem;
+        margin-block-end: 0;
     }
 }
 
-.covid-project {
-    background: #f5f7fb;
+.project-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    column-gap: 1rem;
+    max-width: 45rem;
+    margin-left: auto;
+    margin-right: auto;    
+    width: 95%;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    padding-bottom: 2rem;
 
+    h2 {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #cecece;
+        text-transform: uppercase;
+    }
+}
+
+.covid-project {    
     header {
         background-color: #2b35eb;
     }
@@ -296,7 +321,7 @@ h4 {
     }
 
     .gatsby-image-wrapper {
-        border-radius: 0.5rem;
+        border-radius: 0.3rem;
     }
 
     .project-header {
@@ -313,23 +338,23 @@ h4 {
         box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.2);
     }
 
-    h1 {
-        font-size: 2.8rem;
-        font-weight: 600;
-        text-align: center;
-    }
 
     h3 {
-        font-size: 2.2rem;
-        font-weight: 500;
-        color: #2b35eb;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #333;
+        margin-block-start: 4rem;
+        margin-block-end: 0;
     }
 
     .section-blue {
-        background-color: #2b35eb;
-        color: white;
+        background-color: #2b35eb;        
         margin-top: 4rem;
         margin-bottom: 4rem;
+
+        p {
+            color: white;
+        }
 
         h3 {
             color: white;
@@ -337,10 +362,72 @@ h4 {
         }
     }
 
-    p {
+    .wrap-small p {        
         font-weight: 400;
-        font-size: 1.25rem;
-        line-height: 2rem;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        max-width: 50rem;
+    }
+}
+
+
+.seeda-project {    
+    header {
+        background-color: #313338;
+    }
+
+    nav a {
+        color: $white;
+    }
+
+    .gatsby-image-wrapper {
+        border-radius: 0.3rem;
+    }
+
+    .project-header {
+        background-color: #313338;
+        color: $white;
+    }
+
+    .project-info h2 {
+        color: $gray-60;
+    }
+
+    .shadow {
+        -webkit-box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.2);
+    }
+
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #333;
+        margin-block-start: 4rem;
+        margin-block-end: 0;
+    }
+
+    .section-gray {
+        background-color: #313338;        
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+
+        p {
+            color: white;
+        }
+
+        h3 {
+            color: white;
+            margin-top: 0;
+        }
+    }
+
+    .wrap-small p {        
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
         margin-bottom: 1rem;
         margin-top: 1rem;
         max-width: 50rem;
@@ -393,10 +480,36 @@ nav .nav-right a {
     FOOTER
 */
 
-footer {
-    margin-left: auto;
-    margin-right: auto;
-    p {
-        font-size: 1.2rem;
+footer {  
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    background-color: #f0f0f0;
+    p { 
+        color: #616161;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 45rem;         
+        font-size: 1.1rem;
+        font-weight: 500;    
+        text-align: right;        
     }
 }
+
+
+
+
+
+
+
+/*
+    MEDIA QUERIES
+*/
+
+@media screen and (max-width: 600px) {
+    .hero {
+      h1 {
+          font-size: 3.1rem;
+      }
+    }
+  }
+  
