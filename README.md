@@ -1,6 +1,6 @@
 # P03
 
-[Link to the site](pdelfan.github.io)
+[Link to the site](https://www.pdelfan.github.io)
 
 Developed using Gatsby. 
 
