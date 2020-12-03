@@ -72,6 +72,15 @@ p {
     color: #333;
 }
 
+a {
+    color: $black;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 .wrap-small {
     max-width: 45rem;
     margin-left: auto;
@@ -136,22 +145,27 @@ h4 {
 .notFound {
     background-color: #1a171f;
 
+    header,
+    nav {
+        background-color: #1a171f;
+    }
+
     header a {
         color: $white;
     }
 
     h1 {
         color: $white;
-        font-family: 'Literata';
+        font-family: "Literata";
         margin-left: auto;
-        margin-right: auto;   
-        text-align: center; 
+        margin-right: auto;
+        text-align: center;
     }
 
     .gatsby-image-wrapper {
         max-width: 70rem;
         margin-left: auto;
-        margin-right: auto;   
+        margin-right: auto;
         border-radius: 1rem;
         margin-bottom: 5rem;
         width: 95%;
@@ -172,7 +186,8 @@ h4 {
 
 // home
 .home {
-    nav, header {
+    nav,
+    header {
         background-color: #1a171f;
     }
 
@@ -191,25 +206,25 @@ h4 {
     }
 
     h1,
-    h2 {
-        font-family: "Literata";
+    h2 {        
         font-weight: 600;
         color: $white;
         margin-block-start: 0;
     }
 
     h1 {
-        padding-top: 5rem;
+        font-family: "Literata";
+        padding-top: 4rem;
         max-width: 60rem;
         line-height: 8rem;
     }
 
     h2 {
         color: $warm-gray-10;
-        padding-top: 7rem;
-        padding-bottom: 4rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
         margin-bottom: 0;
-        max-width: 40rem;
+        max-width: 50rem;
         line-height: 3rem;
     }
 
@@ -224,12 +239,17 @@ h4 {
         background-color: #1a171f;
         transition: 0.1s;
     }
+
+    .other-stuff {
+        font-weight: 400;
+        color: $warm-gray-20;
+    }
 }
 
 .divider {
     background-color: #1a171f;
     hr {
-        border: 1px solid #3e374b;        
+        border: 1px solid #3e374b;
         margin: 0 auto 0 auto;
         max-width: 90rem;
     }
@@ -367,13 +387,13 @@ h4 {
 }
 
 .covid-project {
-
-    nav, header {
-        background-color: #D11B5F;
+    nav,
+    header {
+        background-color: #d11b5f;
     }
 
     .project-header {
-        background-color: #D11B5F;
+        background-color: #d11b5f;
         color: $white;
     }
 
@@ -395,7 +415,7 @@ h4 {
     }
 
     .section-pink {
-        background-color: #D11B5F;
+        background-color: #d11b5f;
         margin-top: 4rem;
         margin-bottom: 4rem;
 
@@ -420,7 +440,8 @@ h4 {
 }
 
 .seeda-project {
-    nav, header {
+    nav,
+    header {
         background-color: #313338;
     }
 
@@ -483,16 +504,17 @@ h4 {
     HEADER
 */
 
-nav {    
+nav {
     margin-left: auto;
-    margin-right: auto;    
-    position: fixed;    
-    width: 100%;    
+    margin-right: auto;
+    position: fixed;
+    width: 100%;
     z-index: 999;
     box-sizing: border-box;
     display: flex;
-    justify-content: space-between;    
-    padding: 1rem 1.2rem;    
+    justify-content: space-between;
+    padding: 1rem 1.2rem;
+    top: 0;
 }
 
 nav a {
@@ -528,26 +550,28 @@ nav .nav-right a {
 
 footer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    width: 100%;    
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    justify-items: start;
+    width: 100%;
     margin-bottom: 0;
     bottom: 0;
     background-color: #f0f0f0;
-    
+    padding: 0 0.5rem;
+
     p {
-        color: #616161;
         margin-left: auto;
         margin-right: auto;
+        color: #616161;
         max-width: 45rem;
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 500;
         text-align: center;
     }
 
-    #footer-link a {           
-        color: #616161;        
-        text-decoration: none;       
-        font-size: 1.1rem;
+    #footer-link a {
+        color: #616161;
+        text-decoration: none;
+        font-size: 1rem;
         font-weight: 500;
         margin-left: auto;
         margin-right: auto;
@@ -556,9 +580,78 @@ footer {
     }
 
     #footer-link a:hover {
-        color: $black;             
+        color: $black;
         background-color: #f0f0f0;
         transition: 0.1s;
+    }
+}
+
+/*
+    STYLE GUIDE
+*/
+
+.style-guide {
+    nav {
+        background-color: white;
+    }
+    nav a {
+        color: $gray-90;
+    }
+
+    h1,
+    h2 {
+        font-weight: 600;
+        margin-block-start: 0;
+    }
+
+    h1 {
+        font-family: "Literata";
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-weight: 600;        
+    }
+
+    h4 {
+        font-weight: 400;
+        color: $cool-gray-90;
+    }
+
+    .projects {
+        background-color: #1a171f;
+        padding: 1rem 3rem 0rem 3rem;
+        border-radius: 1rem;
+    }
+
+    .project-card {
+        cursor: pointer;
+    }
+
+    pre.prettyprint {
+        border: none;
+    }
+
+    code {
+        display: block;
+        padding: 1rem;
+        font-family: "Inconsolata", sans-serif;
+        background-color: #EFECF4;
+        border-radius: 1rem;
+
+        white-space: pre-wrap;
+        /* Since CSS 2.1 */
+        white-space: -moz-pre-wrap;
+        /* Mozilla, since 1999 */
+        white-space: -pre-wrap;
+        /* Opera 4-6 */
+        white-space: -o-pre-wrap;
+        /* Opera 7 */
+        word-wrap: break-word;
+        /* Internet Explorer 5.5+ */
     }
 }
 
@@ -567,11 +660,13 @@ footer {
 */
 
 @media screen and (max-width: 600px) {
-    .hero, .notFound {
+    .hero,
+    .notFound,
+    .style-guide {
         h1 {
             font-size: 3.1rem;
             line-height: 4rem;
-            padding-top: 1rem;
+            padding-top: 4rem;
         }
 
         h2 {

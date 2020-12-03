@@ -9,7 +9,7 @@ const Header = () => {
                     <AniLink cover to="../" bg="#120f14" direction="down">Pouria Delfan</AniLink>
                 </div>
                 <div className="nav-right">
-                    <AniLink cover to="/seeda" direction="down">About</AniLink>
+                    <a href="mailto:pdelfana@sfu.ca">Contact</a>
                     <a href="https://github.com/pdelfan">GitHub</a>
                 </div>
             </nav>

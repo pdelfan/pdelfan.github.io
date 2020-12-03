@@ -17,7 +17,8 @@ const Home = ({ data }) => {
         <div className="hero-content">
           <h1>I design and code products on the web.</h1>
           <div>
-            <h2>When I have time, I also visualize data on my <a
+            <h2>Hi, I'm Pouria, an interaction design student at Simon Fraser University who loves to create digital tools and products, improving people's experiences on the web. Currently, I work as a freelancer, designing and developing websites and web applications.</h2>
+            <h2 className="other-stuff">When I have time, I also visualize data on my <a
               href="https://observablehq.com/@pdelfan">Observable</a> notebook, <a
                 href="https://www.goodreads.com/user/show/32852397-pouria">read books</a>, and <a
                   href="https://www.flickr.com/photos/158143148@N02/">take photos</a>.
