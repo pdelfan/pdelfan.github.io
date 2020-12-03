@@ -1,6 +1,8 @@
 import React from 'react'
 import { Helmet } from "react-helmet"
 import Footer from "./footer"
+import Header from "../components/header"
+
 
 
 
@@ -13,7 +15,10 @@ const Layout = (props) => {
                 <html lang="en" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" as="font" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" />
+                <link href="https://fonts.googleapis.com/css2?family=Literata:wght@500;600;700;800;900&display=swap" rel="stylesheet" as="font" />
             </Helmet>
+            <Header />
             
             {props.children}
             <Footer />

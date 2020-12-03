@@ -4,11 +4,10 @@ import { Helmet } from "react-helmet"
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-
 const SeedaProject = ({ data }) => {
     return (
         <Layout>
-             <Helmet>
+            <Helmet>
                 <body className="seeda-project" />
             </Helmet>
             <div className="project-header">
@@ -38,6 +37,58 @@ const SeedaProject = ({ data }) => {
                     <p>HTML, CSS, JavaScript</p>
                 </div>
             </div>
+
+            <section>
+                <div className="wrap-small">
+                    <h3>Overview and objective</h3>
+                    <p>
+                        SEEDA is an engineering consulting company that helps clients deliver successful projects.
+                        Through a web design and development course at SFU, I was introduced to SEEDA and tasked with
+                        creating a new design for their website in order to increase online engagement.
+                    </p>
+
+                    <h3>Redefining the brand</h3>
+                    <p>
+                        At an initial meeting with SEEDA, I set out to gain an understanding of the company’s mission,
+                        audience and personality. I narrowed down potential customers to investors and engineering
+                        organizations that seek expert advice.
+                    </p>
+
+                    <Img fluid={data.seedaColors.childImageSharp.fluid} alt="A colour palette was created for the style guide." className="border" />
+                    <figcaption>A colour palette was created for the style guide.</figcaption>
+
+                    <p>
+                        Having identified the target audience, I started working on a style guide to summarize SEEDA’s values,
+                        ensuring a consistent, creating guidelines for elements that play a role in the look and feel of the website,
+                        to be used by designers and developers to ensure brand cohesion.
+                    </p>
+
+                    <Img fluid={data.seedaStyleGuide.childImageSharp.fluid} alt="Style guide for SEEDA. Here, one of the elements in the style guide is shown: news cards." className="border" />
+                    <figcaption>Style guide for SEEDA. Here, one of the elements in the style guide is shown: news cards.</figcaption>
+
+                    <h3>Building the website</h3>
+                    <p>
+                        After settling on the ethos of SEEDA as a company, I began making the vision of the new website a reality,
+                        using the existing content on SEEDA’s current website. The elements that were designed in the style guide
+                        were put together to form components such as headers and forms. These components were then combined to form layouts of the pages.
+                    </p>
+
+                </div>
+
+                <div className="background-seeda">
+                    <Img fluid={data.seedaDevices.childImageSharp.fluid} alt="Home page of the website." className="wrap-large"  />                    
+                </div>
+
+                <div className="wrap-small">
+
+                    <p>
+                        The website was developed to be responsive and device-agnostic. It uses a grid system that automatically
+                        adapts to device’s screen size—no breakpoints and the same content is presented to all users, regardless
+                        of their platform of choice.
+                    </p>
+
+                </div>
+            </section>
         </Layout>
     )
 }
@@ -48,50 +99,43 @@ export default SeedaProject
 
 
 
-
 export const query = graphql`
 query {
-    seedaPostHeader: file(relativePath: {eq: "seeda-post.png"}) {
+    seedaPostHeader: file(relativePath: {eq: "seeda-pages.png"}) {
         childImageSharp {
             fluid {
                 ...GatsbyImageSharpFluid_withWebp
             }
         }
   },
-  sketch1: file(relativePath: {eq: "covid-sketch.png"}) {
+    seedaHome: file(relativePath: {eq: "seeda-post.png"}) {
+        childImageSharp {
+            fluid {
+                ...GatsbyImageSharpFluid_withWebp
+            }
+        }
+  },
+  seedaColors: file(relativePath: {eq: "seeda-colors.png"}) {
         childImageSharp {
             fluid {
                 ...GatsbyImageSharpFluid_withWebp
             }
     }
   },
-  sketch2: file(relativePath: {eq: "covid-sketch2.png"}) {
+  seedaStyleGuide: file(relativePath: {eq: "seeda-style-guide.png"}) {
         childImageSharp {
             fluid {
             ...GatsbyImageSharpFluid_withWebp
             }
         }
-    },
-    viz1: file(relativePath: {eq: "viz1.png"}) {
+    },    
+    seedaDevices: file(relativePath: {eq: "seeda-devices.png"}) {
         childImageSharp {
             fluid {
-            ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp
             }
         }
-    },
-    viz2: file(relativePath: {eq: "viz2.png"}) {
-        childImageSharp {
-            fluid {
-            ...GatsbyImageSharpFluid_withWebp
-            }
-        }
-    },
-    viz3: file(relativePath: {eq: "viz3.png"}) {
-        childImageSharp {
-            fluid {
-            ...GatsbyImageSharpFluid_withWebp
-            }
-        }
-    },
+  },
 }
 `
+

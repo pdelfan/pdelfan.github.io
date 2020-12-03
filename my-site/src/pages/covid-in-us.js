@@ -46,37 +46,14 @@ const CovidProject = ({ data }) => {
                     <p>
                         With the Coronavirus outbreak, many informative graphs and dashboards were created on the
                         web. Having interacted with a number of them, I found them to be slow, unresponsive, and at
-                        times overwhelming. This is also what I was told by some of my family members to whom I
-                        recommended some of these websites. Around this time, I was taking a data visualization
-                        course at SFU and becoming familiar with this area and how to implement such systems.
-                    </p>
-
-                    <p>
-                        This motivated me to design a webpage on
-                        COVID-19 to inform my relatives who live in the U.S. The site was designed with a
-                        captivating
-                        aesthetic, communicating information through one visualization at a time, step by step. The
-                        main idea was to implement this webpage with an exceptional level of performance. After all,
-                        it was going to be used by my family and occasionally myself.
-                    </p>
-
-                    <h3>The problem with websites</h3>
-
-                    <p>As a frequent visitor of COVID-related sites, I find the slowness of major sites amusing, but it is
-                not a rare occurrence. The web has <a href="https://idlewords.com/talks/website_obesity.htm">an
-                obesity crisis</a>. Websites with mostly text and a few images are filled with trackers,
-                scripts, and ads. For instance, The New York Times' page for COVID-related news is almost up to 12MB
-                in size. In another example, I <a href="https://www.youtube.com/watch?v=2gYd6pcebag&feature=emb_title">tested</a> John Hopkin's
-                COVID dashboard; it took around 15 seconds to fully load the page.
-                </p>
-
-                    <p>
-                        Frustrated with the slowness of news sites and dashboards, I decided to re-create some of the useful
+                        times overwhelming. Frustrated with the slowness of news sites and dashboards, I decided to re-create some of the useful
                         visualizations that I have seen around the web, with an emphasis on performance. I aimed to have the
                     site load in less than 4 seconds, which is around the <a href="https://www.hobo-web.co.uk/your-website-design-should-load-in-4-seconds/">ideal load
                     time</a> for webpages. This would result in less frustrations for me and other users who are
                     possibly going to be visiting the website every day to find the latest numbers.
-                </p>
+                    </p>
+
+
                 </div>
             </section>
 
@@ -106,18 +83,6 @@ const CovidProject = ({ data }) => {
                     <figcaption>Early sketches for some of the visualiations I implemented</figcaption>
 
 
-
-                    <h3>The data</h3>
-
-                    <p>Since January, the New York Times has been tracking COVID-19 in the United States, publishing their
-                    datasets on their <a href="https://github.com/nytimes/covid-19-data">GitHub repository</a> in
-                    multiple datasets, stored in CSV format. I used D3.js (a
-                    JavaScript library for data visualization) to fetch these datasets from GitHub. Thankfully, D3’s
-                    fetch method (d3.csv) is asynchronous by design. This allows the rest of the code to run and the
-                    webpage to load without waiting for a process to complete.
-                </p>
-
-
                     <h3>Total COVID-19 cases and deaths in the United States</h3>
 
                     <p>In order to compare the difference in cases and deaths, I decided to merge two scales in one
@@ -128,7 +93,7 @@ const CovidProject = ({ data }) => {
                     been flattened, making any form of comparison meaningless.
                 </p>
 
-                    <Img fluid={data.viz1.childImageSharp.fluid} alt="line chart of covid cases and deaths" className="website" />
+                    <Img fluid={data.viz1.childImageSharp.fluid} alt="line chart of covid cases and deaths" />
                     <figcaption>
                         First visualization: Line chart. Using two scales prevents flattening of "deaths" and still be able
                         to compare the relative increase of each category
@@ -155,7 +120,7 @@ const CovidProject = ({ data }) => {
                     pink (less than 100 cases) to dark pink (500K cases and above).
                 </p>
 
-                    <Img fluid={data.viz2.childImageSharp.fluid} alt="map of covid cases in the united states" className="website" />
+                    <Img fluid={data.viz2.childImageSharp.fluid} alt="map of covid cases in the united states" />
                     <figcaption>The user can interact with this map by hovering over each state to see the specific number
                     for
                     each state. In the example below, Montana is hovered over, where it’s highlighted in black
@@ -183,27 +148,18 @@ const CovidProject = ({ data }) => {
                     the end of their x-axis clearly illustrated that.
                 </p>
 
-                    <Img fluid={data.viz3.childImageSharp.fluid} alt="multiple line chart of covid cases in the us, divided by state" className="website" />
+                    <Img fluid={data.viz3.childImageSharp.fluid} alt="multiple line chart of covid cases in the us, divided by state" />
                     <figcaption>Using a single scale allows us to directly compare each state to one another</figcaption>
 
                     <h3>Final thoughts</h3>
 
                     <p>This project had quite a learning curve for me. I had primarily made visualizations on <a
-                        href="https://observablehq.com/">Observable</a>
-                    in my notebooks using Vega-Lite and D3 (which took care of hosting and rendering), but I had never
+                        href="https://observablehq.com/">Observable</a>&nbsp;in my notebooks using Vega-Lite 
+                        and D3, but I had never
                     implemented them on a website. However,
                     wrapping up the project made me feel more confident in my ability to learn on my own and debug
                     using Chrome’s developer tools.
                 </p>
-
-                    <p>
-                        One of the reasons this project took longer than I expected was my
-                        lack of understanding about the problems that could have arose. Since the project was for my own, I
-                        didn't have strict deadlines. However, I have learned to manage my expectations and consider
-                        possible challenges before starting a project in order to manage them in time, even for personal
-                        projects which only have soft deadlines.
-                </p>
-
 
                 </div>
             </section>
