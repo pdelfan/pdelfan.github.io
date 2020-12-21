@@ -2,7 +2,13 @@ import React from 'react'
 import { Helmet } from "react-helmet"
 import Footer from "./footer"
 import Header from "../components/header"
-
+import "fontsource-inter/300.css"
+import "fontsource-inter/400.css"
+import "fontsource-inter/500.css"
+import "fontsource-inter/600.css"
+import "fontsource-inter/700.css"
+import "fontsource-inter/800.css"
+import "fontsource-inter/900.css"
 
 
 
@@ -13,10 +19,6 @@ const Layout = (props) => {
                 <meta charSet="utf-8" name="description" content="Pouria's personal website" />
                 <title>Pouria Delfanazari</title>
                 <html lang="en" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" />
-                <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" as="font" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" />
-                <link href="https://fonts.googleapis.com/css2?family=Literata:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" as="font" />                
             </Helmet>
             <Header />
             
