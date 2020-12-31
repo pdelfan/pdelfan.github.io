@@ -17,11 +17,8 @@ const Home = ({ data }) => {
           <h1>I design & code products on the web.</h1>
           <div>
             <h2>
-              Hi, I'm Pouria, an interaction design student at Simon Fraser
-              University who loves to create digital tools and products,
-              improving people's experiences on the web. Currently, I work as a
-              freelancer, designing and developing websites and web
-              applications. When there's time, I also visualize data on my{" "}
+              Hi, I'm Pouria, an interaction designer who loves to create digital products and
+              improve people's experiences on the web. When there's time, I also visualize data on my{" "}
               <a href="https://observablehq.com/@pdelfan">Observable</a>{" "}
               notebook. I enjoy picking up new tools and skills. These are the
               ones I'm most comfortable with:
@@ -45,15 +42,19 @@ const Home = ({ data }) => {
         <h2>Selected Projects</h2>
 
         <div className="projects">
-          <motion.div whileHover={{ scale: 1.015 }} whileTap={{ scale: 0.9 }}>
+          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.9 }}>
             <div className="project-card">
-              <AniLink cover to="/seeda/" direction="down">
+              <AniLink cover to="/seeda/" direction="down">                
                 <Img
                   fluid={data.seedaProjectCard.childImageSharp.fluid}
-                  alt="seeda project card"
-                />
+                  alt="seeda project card"         
+                  imgStyle={{
+                    objectFit: "none",
+                    objectPosition: "50% 50%",
+                  }}         
+                />                
                 <div className="card-text">
-                  <h3>SEEDA &#8250;</h3>
+                  <h3>SEEDA</h3>
                   <h4>Re-imagining SEEDA's online identity</h4>
                   <h5>Branding, web design and development</h5>
                 </div>
@@ -61,15 +62,19 @@ const Home = ({ data }) => {
             </div>
           </motion.div>
 
-          <motion.div whileHover={{ scale: 1.015 }} whileTap={{ scale: 0.9 }}>
+          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.9 }}>
             <div className="project-card">
               <AniLink cover to="/covid-in-us/" direction="down" bg="#d11b5f">
                 <Img
                   fluid={data.covidProjectCard.childImageSharp.fluid}
                   alt="covid project card"
+                  imgStyle={{
+                    objectFit: "none",
+                    objectPosition: "50% 50%",
+                  }} 
                 />
                 <div className="card-text">
-                  <h3>Covid in the US &#8250;</h3>
+                  <h3>COVID-19 in the US</h3>
                   <h4>Tracking the spread of COVID-19 in the United States</h4>
                   <h5>Data visualization, web design and development</h5>
                 </div>

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACI,AAAA,UAAU,GAAE,AAAA,cAAC,CAAe,SAAS,AAAxB;CACb,AAAA,cAAC,CAAe,QAAQ,AAAvB,EAAyB;EACxB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,KAAK;CACf",
+    "sources": [
+        "ImageZoom.module.scss"
+    ],
+    "names": [],
+    "file": "ImageZoom.module.css"
+}
