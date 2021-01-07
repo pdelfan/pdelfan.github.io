@@ -56,7 +56,7 @@ const Home = ({ data }) => {
                 <div className="card-text">
                   <h3>TasKat</h3>
                   <h4>Helping parents and children manage tasks</h4>
-                  <h5>UI/UX design, research</h5>
+                  <h5>UI/UX Design, Research</h5>
                 </div>
               </AniLink>
             </div>
@@ -76,7 +76,7 @@ const Home = ({ data }) => {
                 <div className="card-text">
                   <h3>SEEDA</h3>
                   <h4>Re-imagining SEEDA's online identity</h4>
-                  <h5>Branding, web design and development</h5>
+                  <h5>Branding, Web design and Development</h5>
                 </div>
               </AniLink>
             </div>
@@ -96,7 +96,28 @@ const Home = ({ data }) => {
                 <div className="card-text">
                   <h3>COVID-19 in the US</h3>
                   <h4>Tracking the spread of COVID-19 in the United States</h4>
-                  <h5>Data visualization, web design and development</h5>
+                  <h5>Data Visualization, Web Design and Development</h5>
+                </div>
+              </AniLink>
+            </div>
+          </motion.div>
+
+
+          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.9 }}>
+            <div className="project-card">
+              <AniLink cover to="/visuals/" direction="down" bg="#d11b5f">
+                <Img
+                  fluid={data.visualsProjectCard.childImageSharp.fluid}
+                  alt="visuals project card"
+                  imgStyle={{
+                    objectFit: "none",
+                    objectPosition: "50% 50%",
+                  }} 
+                />
+                <div className="card-text">
+                  <h3>Visuals</h3>
+                  <h4>Curated collection of my miscellaneous graphic design work</h4>
+                  <h5>Graphic Design</h5>
                 </div>
               </AniLink>
             </div>
@@ -132,40 +153,12 @@ export const query = graphql`
         }
       }
     }
-    htmlLogo: file(relativePath: { eq: "html-logo.png" }) {
+    visualsProjectCard: file(relativePath: { eq: "visuals-project-card.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
-    }
-    cssLogo: file(relativePath: { eq: "css-logo.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    javascriptLogo: file(relativePath: { eq: "javaScript-logo.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    gatsbyLogo: file(relativePath: { eq: "gatsby-logo.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    figmaLogo: file(relativePath: { eq: "figma-logo.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
+    }   
   }
 `
