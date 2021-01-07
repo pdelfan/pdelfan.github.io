@@ -52,30 +52,47 @@ const SeedaProject = ({ data }) => {
 
         <div className="wrap-large">
           <div className="posters">
-            <Img
-              fluid={data.poster1.childImageSharp.fluid}
-              alt="visuals project card"
-            />
-            <Img
-              fluid={data.poster2.childImageSharp.fluid}
-              alt="visuals project card"
-            />
-            <Img
-              fluid={data.poster3.childImageSharp.fluid}
-              alt="visuals project card"
-            />
-            <Img
-              fluid={data.poster4.childImageSharp.fluid}
-              alt="visuals project card"
-            />
-            <Img
-              fluid={data.poster5.childImageSharp.fluid}
-              alt="visuals project card"
-            />
-            <Img
-              fluid={data.poster6.childImageSharp.fluid}
-              alt="visuals project card"
-            />
+            <ImageZoom>
+              <Img
+                fluid={data.poster1.childImageSharp.fluid}
+                alt="visuals project card"
+              />
+            </ImageZoom>
+
+            <ImageZoom>
+              <Img
+                fluid={data.poster2.childImageSharp.fluid}
+                alt="visuals project card"
+              />
+            </ImageZoom>
+
+            <ImageZoom>
+              <Img
+                fluid={data.poster3.childImageSharp.fluid}
+                alt="visuals project card"
+              />
+            </ImageZoom>
+
+            <ImageZoom>
+              <Img
+                fluid={data.poster4.childImageSharp.fluid}
+                alt="visuals project card"
+              />
+            </ImageZoom>
+
+            <ImageZoom>
+              <Img
+                fluid={data.poster5.childImageSharp.fluid}
+                alt="visuals project card"
+              />
+            </ImageZoom>
+
+            <ImageZoom>
+              <Img
+                fluid={data.poster6.childImageSharp.fluid}
+                alt="visuals project card"
+              />
+            </ImageZoom>
           </div>
 
           <div className="wrap-small">
@@ -112,8 +129,6 @@ const SeedaProject = ({ data }) => {
               alt="visuals project card"
             />
           </div>
-
-
         </div>
       </section>
     </Layout>
