@@ -40,7 +40,7 @@ a:hover {
   font-size: 1.3rem;
   text-align: center;
   padding: 1.3rem 2rem;
-  max-width: 12.5rem;
+  max-width: 13.5rem;
   margin: 2rem auto;
   border-radius: 8rem;
 }
@@ -154,6 +154,11 @@ h4 {
 
 .notFound a:hover {
   background-color: #1a171f;
+}
+
+.image-small.gatsby-image-wrapper {
+  max-width: 20rem;
+  margin: auto;
 }
 
 .home nav,
@@ -349,6 +354,22 @@ h4 {
   color: #5229de;
 }
 
+.two-column {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+.two-column .gatsby-image-wrapper {
+  margin-top: 0 !important;
+}
+
 .header {
   max-width: 60rem;
   margin: 0rem auto 0 auto;
@@ -521,6 +542,72 @@ h4 {
 }
 
 .seeda-project .gatsby-image-wrapper {
+  margin-top: 2rem;
+}
+
+.taskat-project nav,
+.taskat-project header {
+  background-color: #1371eb;
+}
+
+.taskat-project .background-taskat {
+  background-color: #1371eb;
+}
+
+.taskat-project .project-header {
+  background-color: #1371eb;
+  color: #ffffff;
+}
+
+.taskat-project .project-info h2 {
+  color: #6f6f6f;
+}
+
+.taskat-project .shadow {
+  -webkit-box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.2);
+}
+
+.taskat-project .border {
+  border: 2px solid #ddd;
+}
+
+.taskat-project h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  -webkit-margin-before: 3rem;
+          margin-block-start: 3rem;
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
+}
+
+.taskat-project .section-blue {
+  background-color: #1371eb;
+  padding: 3rem 0;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.taskat-project .section-blue p {
+  color: white;
+}
+
+.taskat-project .section-blue h3 {
+  color: white;
+  margin-top: 0;
+}
+
+.taskat-project .wrap-small p {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.9rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  max-width: 40rem;
+}
+
+.taskat-project .gatsby-image-wrapper {
   margin-top: 2rem;
 }
 

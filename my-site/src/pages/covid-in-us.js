@@ -161,6 +161,8 @@ const CovidProject = ({ data }) => {
                     using Chrome’s developer tools.
                 </p>
 
+                <a href="https://mystifying-mirzakhani-911f68.netlify.app/" className="visit-website">Visit Website</a>
+
                 </div>
             </section>
 

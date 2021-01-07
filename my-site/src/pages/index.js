@@ -42,6 +42,26 @@ const Home = ({ data }) => {
         <h2>Selected Projects</h2>
 
         <div className="projects">
+        <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.9 }}>
+            <div className="project-card">
+              <AniLink cover to="/taskat/" direction="down">                
+                <Img
+                  fluid={data.taskatProjectCard.childImageSharp.fluid}
+                  alt="TasKat project card"         
+                  imgStyle={{
+                    objectFit: "none",
+                    objectPosition: "50% 50%",
+                  }}         
+                />                
+                <div className="card-text">
+                  <h3>TasKat</h3>
+                  <h4>Helping parents and children manage tasks</h4>
+                  <h5>UI/UX design, research</h5>
+                </div>
+              </AniLink>
+            </div>
+          </motion.div>
+
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.9 }}>
             <div className="project-card">
               <AniLink cover to="/seeda/" direction="down">                
@@ -91,6 +111,13 @@ export default Home
 
 export const query = graphql`
   query {
+    taskatProjectCard: file(relativePath: { eq: "taskat-project-card.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
     covidProjectCard: file(relativePath: { eq: "covid-project-card.png" }) {
       childImageSharp {
         fluid {

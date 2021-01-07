@@ -12,7 +12,7 @@ const Header = () => {
           </AniLink>
         </div>
         <div className="nav-right">
-          <a href="mailto:pdelfana@sfu.ca">Contact</a>
+          <a href="/resume.pdf">Resume</a>
           <a href="https://github.com/pdelfan">GitHub</a>
         </div>
       </nav>
