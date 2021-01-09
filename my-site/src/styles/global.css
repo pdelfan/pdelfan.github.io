@@ -120,23 +120,25 @@ h4 {
 }
 
 .notFound {
-  background-color: #1a171f;
+  background-color: #f0f4fd;
 }
 
 .notFound header,
 .notFound nav {
-  background-color: #1a171f;
+  background-color: #f0f4fd;
 }
 
 .notFound header a {
-  color: #ffffff;
+  color: #000000;
 }
 
 .notFound h1 {
-  color: #ffffff;
+  color: #000000;
+  font-size: 4rem;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  width: 95%;
 }
 
 .notFound .gatsby-image-wrapper {
@@ -149,15 +151,7 @@ h4 {
 }
 
 .notFound h1 a {
-  color: #ffe176;
-  background-color: rgba(255, 255, 255, 0.1);
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
-  text-decoration: none;
-}
-
-.notFound a:hover {
-  background-color: #1a171f;
+  font-weight: 600;
 }
 
 .image-small.gatsby-image-wrapper {
@@ -387,8 +381,8 @@ h4 {
 .title h1 {
   font-size: 3rem;
   font-weight: 600;
-  -webkit-margin-before: 0;
-          margin-block-start: 0;
+  -webkit-margin-before: 2rem;
+          margin-block-start: 2rem;
   -webkit-margin-after: 0;
           margin-block-end: 0;
 }

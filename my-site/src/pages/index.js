@@ -17,8 +17,9 @@ const Home = ({ data }) => {
           <h1>I design & code products on the web.</h1>
           <div>
             <h2>
-              Hi, I'm Pouria, an interaction designer who loves to create digital products and
-              improve people's experiences on the web. When there's time, I also visualize data on my{" "}
+              👋 Hi, I'm Pouria, an interaction designer who loves to create
+              digital products and improve people's experiences on the web. When
+              there's time, I also visualize data on my{" "}
               <a href="https://observablehq.com/@pdelfan">Observable</a>{" "}
               notebook. I enjoy picking up new tools and skills. These are the
               ones I'm most comfortable with:
@@ -42,17 +43,17 @@ const Home = ({ data }) => {
         <h2>Selected Projects</h2>
 
         <div className="projects">
-        <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.9 }}>
+          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.9 }}>
             <div className="project-card">
-              <AniLink cover to="/taskat/" direction="down">                
+              <AniLink cover to="/taskat/" direction="down">
                 <Img
                   fluid={data.taskatProjectCard.childImageSharp.fluid}
-                  alt="TasKat project card"         
+                  alt="TasKat project card"
                   imgStyle={{
                     objectFit: "none",
                     objectPosition: "50% 50%",
-                  }}         
-                />                
+                  }}
+                />
                 <div className="card-text">
                   <h3>TasKat</h3>
                   <h4>Helping parents and children manage tasks</h4>
@@ -64,15 +65,15 @@ const Home = ({ data }) => {
 
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.9 }}>
             <div className="project-card">
-              <AniLink cover to="/seeda/" direction="down">                
+              <AniLink cover to="/seeda/" direction="down">
                 <Img
                   fluid={data.seedaProjectCard.childImageSharp.fluid}
-                  alt="seeda project card"         
+                  alt="seeda project card"
                   imgStyle={{
                     objectFit: "none",
                     objectPosition: "50% 50%",
-                  }}         
-                />                
+                  }}
+                />
                 <div className="card-text">
                   <h3>SEEDA</h3>
                   <h4>Re-imagining SEEDA's online identity</h4>
@@ -91,7 +92,7 @@ const Home = ({ data }) => {
                   imgStyle={{
                     objectFit: "none",
                     objectPosition: "50% 50%",
-                  }} 
+                  }}
                 />
                 <div className="card-text">
                   <h3>COVID-19 in the US</h3>
@@ -102,7 +103,6 @@ const Home = ({ data }) => {
             </div>
           </motion.div>
 
-
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.9 }}>
             <div className="project-card">
               <AniLink cover to="/visuals/" direction="down" bg="#d11b5f">
@@ -112,12 +112,41 @@ const Home = ({ data }) => {
                   imgStyle={{
                     objectFit: "none",
                     objectPosition: "50% 50%",
-                  }} 
+                  }}
                 />
                 <div className="card-text">
                   <h3>Visuals</h3>
-                  <h4>Curated collection of my miscellaneous graphic design work</h4>
+                  <h4>
+                    Curated collection of my miscellaneous graphic design work
+                  </h4>
                   <h5>Graphic Design</h5>
+                </div>
+              </AniLink>
+            </div>
+          </motion.div>
+
+          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.9 }}>
+            <div className="project-card">
+              <AniLink
+                cover
+                to="https://observablehq.com/@pdelfan/final-project"
+                direction="down"
+                bg="#d11b5f"
+              >
+                <Img
+                  fluid={data.HomeFinderProjectCard.childImageSharp.fluid}
+                  alt="Home finder project card"
+                  imgStyle={{
+                    objectFit: "none",
+                    objectPosition: "50% 50%",
+                  }}
+                />
+                <div className="card-text">
+                  <h3>Home Finder</h3>
+                  <h4>
+                    Helping Toronto citizens find the perfect retirement home
+                  </h4>
+                  <h5>Data Visualization</h5>
                 </div>
               </AniLink>
             </div>
@@ -146,6 +175,13 @@ export const query = graphql`
         }
       }
     }
+    HomeFinderProjectCard: file(relativePath: { eq: "rh-project-card.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
     seedaProjectCard: file(relativePath: { eq: "seeda-project-card.png" }) {
       childImageSharp {
         fluid {
@@ -159,6 +195,6 @@ export const query = graphql`
           ...GatsbyImageSharpFluid_withWebp
         }
       }
-    }   
+    }
   }
 `

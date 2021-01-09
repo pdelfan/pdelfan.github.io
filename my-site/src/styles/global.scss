@@ -169,22 +169,24 @@ h4 {
 
 // 404 page
 .notFound {
-  background-color: #1a171f;
+  background-color: #f0f4fd;
 
   header,
   nav {
-    background-color: #1a171f;
+    background-color: #f0f4fd;
   }
 
   header a {
-    color: $white;
+    color: $black;
   }
 
   h1 {
-    color: $white;
+    color: $black;
+    font-size: 4rem;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    width: 95%;
   }
 
   .gatsby-image-wrapper {
@@ -197,14 +199,11 @@ h4 {
   }
 
   h1 a {
-    color: #ffe176;
-    background-color: rgba(255, 255, 255, 0.1);
-    transition: 0.1s;
-    text-decoration: none;
+    font-weight: 600;
   }
 
   a:hover {
-    background-color: #1a171f;
+    
   }
 }
 
@@ -346,6 +345,8 @@ h4 {
   box-shadow: 0 40px 80px rgba(24, 32, 79, 0.35),
     inset 0 0 0 0.5px hsla(0, 0%, 100%, 0.5);
   padding: 2rem;
+  
+
 
   .gatsby-image-wrapper {
     max-height: 30rem;
@@ -430,7 +431,7 @@ h4 {
   h1 {
     font-size: 3rem;
     font-weight: 600;
-    margin-block-start: 0;
+    margin-block-start: 2rem;
     margin-block-end: 0;
   }
 

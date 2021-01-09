@@ -16,9 +16,10 @@ const NotFound = ({ data }) => {
                 <body className="notFound" />
             </Helmet>
 
-            <div>
+            <div>   
+              <h1> 😮</h1>           
                 <h1>There's nothing here. <br /> You should try <br />  <AniLink cover to="../" bg="#120F14" direction="top">going back home.</AniLink></h1>
-                <Img fluid={data.notFound.childImageSharp.fluid} alt="Evening Landscape with Two Men by Caspar David Friedrich" />                
+                <Img fluid={data.notFound.childImageSharp.fluid} alt="Evening Landscape with Two Men by Caspar David Friedrich" />                                
             </div>
 
         </Layout>

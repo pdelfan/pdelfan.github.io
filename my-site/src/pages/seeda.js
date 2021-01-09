@@ -144,13 +144,12 @@ const SeedaProject = ({ data }) => {
             their own content without worrying about inconsistencies.
           </p>
 
-          <ImageZoom>
+          
             <Img
               fluid={data.seedaStyleGuide.childImageSharp.fluid}
               alt="Style guide for SEEDA. Here, one of the elements in the style guide is shown: news cards."
               className="border"
-            />
-          </ImageZoom>
+            />          
 
           <figcaption>
             Style guide for SEEDA. Here, one of the elements in the style guide
@@ -250,7 +249,7 @@ const SeedaProject = ({ data }) => {
             />
           </ImageZoom>
           <figcaption>
-            The results show the website is <b>fast</b> and <b>reliable</b>.
+            The Lighthouse results indicates the website is <b>fast</b> and <b>reliable</b>.
           </figcaption>
         </div>
 
